@@ -444,7 +444,7 @@
       inp.value = '';
     }
     document.getElementById('newTodoInput').addEventListener('keydown', e => {
-      if (e.key === 'Enter') tryAdd();
+      if (e.key === 'Enter' && !e.isComposing) tryAdd();
     });
     document.getElementById('addBtn').addEventListener('click', tryAdd);
 
